@@ -20,6 +20,7 @@
                 <h1>Welcome, {{user.first_name}}!</h1>
             </div>
             <div class="col-3">
+                <a href="/books">Go Back</a>
                 <a href="/logout">Logout</a>
             </div>
         </div>
@@ -34,37 +35,9 @@
                     </ul>
                     {% endif %}
                 </div>
-                <h2>Add a Favorite Book</h2>
-                <form action="/books/create" method="POST">
-                    {% csrf_token %}
-                    <label class="from-label" for="title">Title: </label><input class="form-control" type="text"
-                        name="title">
-                    <label class="from-label" for="description">Description: </label><input class="form-control"
-                        type="text" name="description">
-                    <input class="btn btn-primary active" type="submit" value="Add">
-                </form>
-            </div>
-            <div class="col-7">
-                <div>
-                    <h2>Liked Books</h2>
-                    {% for book in all_books %}
-                    {% if user in book.users_who_like.all %}
-                    <h4><a href="#">{{ book.title }}</a></h4>
-                    <p>(added by {{ book.creator.first_name }} {{ book.creator.last_name}})</p>
-                    <p>This is one of your favorites</p>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <div>
-                    <h2>Other Books</h2>
-                    {% for book in all_books %}
-                    {% if user not in book.users_who_like.all %}
-                    <h4><a href="#">{{ book.title }}</a></h4>
-                    <p>(added by {{ book.creator.first_name }} {{ book.creator.last_name}})</p>
-                    <p><a href="#">Like this book</a></p>
-                    {% endif %}
-                    {% endfor %}
-                </div>
+                
+                <h2>{{book.title}}</h2>
+                
 
             </div>
         </div>

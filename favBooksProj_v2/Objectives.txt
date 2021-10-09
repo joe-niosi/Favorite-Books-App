@@ -1,0 +1,27 @@
+### 1. Create the User and Book models with all appropriate relationships
+
+### 2. Incorporate a validated login/registration page  
+
+### 3. On the main page, allow the user to add a new book, with validations. 
+
+### 4. Added books should automatically be favorited by the logged in user.
+
+### 5. Have a list of all the books on the main page displaying the title and the user who uploaded the book  
+
+6. When the title is clicked, display a page with the book's information, including a list of all users who have favorited that book
+
+7. If the logged in user has favorited the book, they should be able to "un-favorite" the book  
+
+8. If the logged in user has not yet favorited the book, there should be a link to add this book to their favorites  
+
+9. If the logged in user is the uploader of the book, allow them to edit (same validations apply) or delete the book  
+
+10. NINJA BONUS: On the main page, if the logged in user has not favorited the book, there should be a link so the user can add it to their favorites. Otherwise, display a message indicating the book has already been favorited.  
+
+11. SENSEI BONUS: Add a user page that allows the user to view a list of all their favorite books
+
+12. Style up using Bootstrap and make it look awesome
+
+13. build a Nav Bootstrap
+
+14. DEPLOY

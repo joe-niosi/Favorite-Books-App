@@ -49,7 +49,7 @@
                     <h2>Liked Books</h2>
                     {% for book in all_books %}
                     {% if user in book.users_who_like.all %}
-                    <h4><a href="#">{{ book.title }}</a></h4>
+                    <h4><a href="/books/{{book.id}}">{{ book.title }}</a></h4>
                     <p>(added by {{ book.creator.first_name }} {{ book.creator.last_name}})</p>
                     <p>This is one of your favorites</p>
                     {% endif %}

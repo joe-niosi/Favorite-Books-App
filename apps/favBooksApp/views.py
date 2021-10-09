@@ -27,3 +27,12 @@ def new_book(request):
     user.liked_books.add(book) # this make creator of the book automatically favorite the book
     print(book)
     return redirect('/books')
+    
+def one_book(request, book_id):
+    user = User.objects.get(id = request.session['user_id'])
+    all_books = Book.objects.get(id = book_id)
+    context = {
+        'user': user,
+        'all_books': all_books,
+    }
+    return render(request, "one_book.html", context)
